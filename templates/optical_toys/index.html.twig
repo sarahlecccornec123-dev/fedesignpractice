@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Optical Toys | Optical Illusions and Toys{% endblock %}
+
+{% block fontScripts %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('styles/app.scss')}}">
+
+{% endblock %}
+
+{% block body %}
+
+<div class="optical-wrapper">
+
+    {# A replical of the website https://optical.toys #}
+
+    <div class="optical-title">
+        <h1>Optical Toys</h1>
+        <span>OPTICAL ILLUSIONS & BRAIN BENDING TOYS</span> - <a href="#"><span>RSS</span></a>
+    </div>
+
+    <div class="optical-illusions-carousel">
+
+        {% for toy in opticalToys %}
+
+            <div class="optical-toy">
+
+                <span>{{ toy.flash }}</span>
+                <img src="{{ toy.image }}">
+                <span>{{ toy.title }}</span>
+                <span>{{ toy.description }}</span>
+
+            </div>
+
+        {% endfor %}
+
+        
+    </div>
+
+    <footer>
+        <a href="#">toms.toys</a>
+        <span></span>
+        <a href="#">privacy</a>
+        <span></span>
+        <a href="#">terms</a>
+
+
+        
+    </footer>
+
+
+
+</div>
+{% endblock %}

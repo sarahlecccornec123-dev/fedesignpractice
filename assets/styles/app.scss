@@ -1,0 +1,32 @@
+// add your SASS styles in this file
+
+$background-main: #E9C745;
+
+// optical toys only 
+
+body {
+    background-color: $background-main;
+}
+
+a {
+    cursor: pointer;
+}
+
+.optical-wrapper {
+      font-family: "VT323", monospace;
+      .optical-title {
+        display: inline-block;
+        h1 {
+            font-size: 60px;
+        }
+        span {
+            font-size: 18px;
+            a {
+                text-decoration: underline;
+                
+            }
+        }
+      }
+}
+
+
