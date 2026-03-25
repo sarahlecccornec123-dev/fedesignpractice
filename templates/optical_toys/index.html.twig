@@ -33,10 +33,16 @@
 
             <div class="optical-toy">
 
-                <span>{{ toy.flash }}</span>
-                <img src="{{ toy.image }}">
-                <span>{{ toy.title }}</span>
-                <span>{{ toy.description }}</span>
+                
+                <div class="optical-image">
+                    <span class="optical-toy-flash-name">{{ toy.flash }}</span>
+                    <img class="optical-toy-img" src="{{ toy.image }}">
+                    <div class="hover">
+                        <svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 6h8V8H8V6zM4 10V8H8v2H4zM2 12V10H4v2H2zm0 2V12H0v2H2zm2 2H2V14H4v2zm4 2H4V16H8v2zm8 0v2H8V18h8zm4-2v2H16V16h4zm2-2v2H20V14h2zm0-2h2v2H22V12zm-2-2h2v2H20V10zm0 0V8H16v2h4zM10 11h4v4H10V11z" fill="currentcolor"></path></svg>
+                    </div>
+                </div>
+                <span class="optical-toy-title">{{ toy.title }}</span>
+                <span class="optical-toy-description">{{ toy.description }}</span>
 
             </div>
 
@@ -47,9 +53,9 @@
 
     <footer>
         <a href="#">toms.toys</a>
-        <span></span>
+        <span class="footer-copyright">&#169;</span>
         <a href="#">privacy</a>
-        <span></span>
+        <span>&#9055;</span>
         <a href="#">terms</a>
 
 
