@@ -21,7 +21,9 @@ $background-main: #E9C745;
 // todo put all the rgba into variables 
 
 body {
-    background-color: $background-main;
+    // background-color: $background-main;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -29,6 +31,7 @@ a {
 }
 
 .optical-wrapper {
+    background-color: $background-main;
       font-family: "VT323", monospace;
       padding-left: 150px;
       padding-top: 20px;
@@ -136,6 +139,18 @@ a {
             display: inline-block;
         }
       }
+}
+
+// long doge 
+
+.doge-wrapper {
+    .doge-header {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }
+    pre {
+        margin: 0 50%;
+        padding: 0;
+    }
 }
 
 

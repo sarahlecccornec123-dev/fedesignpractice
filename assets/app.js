@@ -1,4 +1,6 @@
 import './stimulus_bootstrap.js';
+import $ from 'jquery';
+import './js/long-doge.js';
 /*
  * Welcome to your app's main JavaScript file!
  *
