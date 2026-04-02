@@ -2,11 +2,7 @@
 
 {% block title %}The Long Doge Challenge{% endblock %}
 
-{% block stylesheets %}
 
-    <link rel="stylesheet" href="{{ asset('styles/app.scss')}}">
-
-{% endblock %}
 
 {% block body %}
 
@@ -16,8 +12,10 @@
     <div class="doge-header">
         <h1>Long Doge Challenge</h1>
         <span>Your doge is <b>wow</b> long</span>
-        <span>You have collected <span>2</span> wows</span>
+        <span>You have collected <span id="wows">2</span> wows</span>
     </div>
+
+    <div id="largewowcontainer" class="hidden"></div>
 
     <pre class="head">        ▄               ▄    
         ▌▒█           ▄▀▒▌   
