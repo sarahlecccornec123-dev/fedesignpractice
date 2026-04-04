@@ -146,15 +146,41 @@ a {
 }
 
 // long doge 
-
-.doge-wrapper {
-    .doge-header {
+body.long-doge {
+    margin: 8px;
+    min-width: 800px;
+    min-height: 100%;
+     .doge-header {
         font-family: "Comic Sans MS", "Comic Sans", cursive;
+        position: fixed;
+        padding-left: 20px;
+        h1 {
+            margin-bottom: 5px;
+        }
+        span.doge-stat-span {
+            display: block;
+        }
+    }
+     .doge-scroll-wrapper {
+        padding-top: 30vh;
+        width: 220px;
+        margin: auto;
     }
     pre {
-        margin: 0 50%;
         padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    pre.neck {
+        margin: 0 50%;
     }
 }
+
+
+   
+
 
 

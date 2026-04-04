@@ -3,7 +3,7 @@ console.log('WORKING');
 // all of this code is from https://longdogechallenge.com/index.js 
 // I was curious how it all worked so I rewrote it all line by line
 
-const wrapper = document.querySelector('.doge-wrapper');
+const wrapper = document.querySelector('.doge-scroll-wrapper');
 const neck = document.querySelector('.neck');
 const wowEl = document.querySelector('#wows');
 
@@ -84,13 +84,13 @@ function injectWow() {
     newWow.style.top = wrapper.offsetHeight - 200 + "px";
     document.body.append(newWow);
 
-    if (isPrime(wows)) {
-        primeWows.push(newWow);
-    }
+    // if (isPrime(wows)) {
+    //     primeWows.push(newWow);
+    // }
 
-    if (isFibonacci(wows)) {
-        fibonacciWows.push(newWow);
-    }
+    // if (isFibonacci(wows)) {
+    //     fibonacciWows.push(newWow);
+    // }
 
     if (wows === 10) {
         lengthEl.innerText = "wow wow";
@@ -173,33 +173,33 @@ function injectLargeWow() {
     }
 }
 
-function isPrime(n) {
-    if (n < 2) {
-        return false;
-    }
+// function isPrime(n) {
+//     if (n < 2) {
+//         return false;
+//     }
 
-    // .sqrt() returns the square root of a number 
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt 
-    var q = Math.floor(Math.sqrt(n));
-    for (var i = 2; i <= q; i++) {
-        if (n % i == 0) {
-            return false;
-        }
-    }
+//     // .sqrt() returns the square root of a number 
+//     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt 
+//     var q = Math.floor(Math.sqrt(n));
+//     for (var i = 2; i <= q; i++) {
+//         if (n % i == 0) {
+//             return false;
+//         }
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
-function isSquare(n) {
-    return n > 0 && Math.sqrt(n) % 1 === 0;
-}
+// function isSquare(n) {
+//     return n > 0 && Math.sqrt(n) % 1 === 0;
+// }
 
-function isFibonacci(numberToCheck) {
-    return (
-        isSquare(5 * numberToCheck * numberToCheck + 4) ||
-        isSquare(5 * numberToCheck * numberToCheck - 4)
-    );
-}
+// function isFibonacci(numberToCheck) {
+//     return (
+//         isSquare(5 * numberToCheck * numberToCheck + 4) ||
+//         isSquare(5 * numberToCheck * numberToCheck - 4)
+//     );
+// }
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -222,41 +222,8 @@ function onBodyClick(e) {
             return wowEl.classList.contains("rainbow");
         });
 
-        // activate DOGE PRIME 
-        if (dogePrime === false && isPrime === true) {
-            dogePrime = true;
-            dogePrimeEl.innerText = "ACTIVE";
-        } else if (count !== primeWows.length) {
-            dogePrimeEl.innerText = "INACTIVE (" + count + '/' + primeWows.length + ")";
-        }
-    }
 
-    if (e.target.className === "secretwow") {
-        e.target.classList.add("found");
-        secretwows++;
-        secretWowEl.innerText = secretwows;
-
-        if (secretwows === 100) {
-            fibonacciChallengeStarted = true;
-            fiboWowContainer.classList.remove("hidden");
-        }
     }
-    if (fibonacciChallengeStarted) {
-    if (
-      e.target.classList.contains("textwow") ||
-      e.target.classList.contains("secretwow")
-    ) {
-      if (e.target.classList.contains("spinLeft")) {
-        e.target.classList.remove("spinLeft")
-        e.target.classList.add("spinRight")
-      } else if (e.target.classList.contains("spinRight")) {
-        e.target.classList.remove("spinRight")
-        e.target.classList.add("spinLeft")
-      } else {
-        e.target.classList.add("spinLeft")
-      }
-
-      checkAllFiboWows()
-    }
-  }
 }
+
+

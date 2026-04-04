@@ -2,18 +2,24 @@
 
 {% block title %}The Long Doge Challenge{% endblock %}
 
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('styles/app.scss')}}">
+
+{% endblock %}
 
 
+{% block body_class %}long-doge{% endblock %}
 {% block body %}
 
 
-<div class="doge-wrapper">
+<!-- <div class="doge-wrapper"> -->
 
     <div class="doge-header">
         <h1>Long Doge Challenge</h1>
         <div class="doge-stats">
-            <span>Your doge is <b id="length">wow</b> long</span>
-            <span>You have collected <span id="wows">2</span> wows</span>
+            <span class="doge-stat-span">Your doge is <b id="length">wow</b> long</span>
+            <span class="doge-stat-span">You have collected <span id="wows">2</span> wows</span>
 
         </div>
     </div>
@@ -34,6 +40,7 @@
       FibonacciDoge is <span id="fibo">INACTIVE</span>
     </div>
 
+  <div class="doge-scroll-wrapper">
     <pre class="head">        ▄               ▄    
         ▌▒█           ▄▀▒▌   
         ▌▒▒█        ▄▀▒▒▒▐   
@@ -99,6 +106,7 @@
   ▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▄▒▒▐
   ▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▄▒▒▒▒▌
 </pre>
-
 </div>
+
+<!-- </div> -->
 {% endblock %}
